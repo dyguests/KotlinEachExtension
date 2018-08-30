@@ -4,7 +4,7 @@ inline val <reified T> Iterable<T>.each: T
 
         val clazz = T::class.java
 
-        iterator.forEach {  }
+        iterator.forEach { }
 
-        return iterator.next()
+        return clazz.newInstance()
     }
