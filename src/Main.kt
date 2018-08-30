@@ -1,3 +1,5 @@
+import com.fanhl.ktssugar.each
+
 fun main(args: Array<String>) {
     val list = listOf(A("a"), A("c"), A("c"))
 
