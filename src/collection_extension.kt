@@ -1,3 +1,5 @@
+import java.lang.reflect.Proxy
+
 inline val <reified T> Iterable<T>.each: T
     get() {
         val iterator = this.iterator()
@@ -6,5 +8,10 @@ inline val <reified T> Iterable<T>.each: T
 
         iterator.forEach { }
 
+//        Proxy.newProxyInstance(clazz.classLoader)
+
+
+
         return clazz.newInstance()
     }
+
