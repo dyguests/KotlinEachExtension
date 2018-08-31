@@ -17,8 +17,6 @@ object LinProxies {
                 handler
         )
 
-        (newProxyInstance as IA).print()
-
         return newProxyInstance as T
     }
 
