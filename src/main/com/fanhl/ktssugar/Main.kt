@@ -1,4 +1,4 @@
-import com.fanhl.ktssugar.each
+package com.fanhl.ktssugar
 
 fun main(args: Array<String>) {
     val list = listOf(A("a"), A("c"), A("c"))
@@ -10,7 +10,7 @@ private fun Int.println() {
     println(this)
 }
 
-class A(val s: String = "none") {
+open class A(val s: String = "none") {
     fun print() {
         println(s)
     }
