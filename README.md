@@ -10,6 +10,16 @@ list.each.doXxx()
 
 的形式不？
 
+# conclusion
+
+Will,It's works.
+
+    listOf<IA>(A("a"), A("b"), A("c")).each.print()
+
+But `IA` must be interface,sad.
+
+Hope there is a better way.
+
 # base
 
 [New Tricks with Dynamic Proxies in Java 8 (part 2)](https://opencredo.com/dynamic-proxies-java-part-2/)

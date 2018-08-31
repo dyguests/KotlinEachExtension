@@ -1,9 +1,7 @@
 package com.fanhl.ktssugar
 
 fun main(args: Array<String>) {
-    val list = listOf<IA>(A("a"), A("b"), A("c"))
-
-    list.each.print()
+    listOf<IA>(A("a"), A("b"), A("c")).each.print()
 }
 
 interface IA {
