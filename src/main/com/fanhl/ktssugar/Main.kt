@@ -10,8 +10,12 @@ private fun Int.println() {
     println(this)
 }
 
-class A(val s: String = "none") {
-    fun print() {
+interface IA{
+    fun print()
+}
+
+class A(val s: String = "none"):IA {
+    override fun print() {
         println(s)
     }
 }

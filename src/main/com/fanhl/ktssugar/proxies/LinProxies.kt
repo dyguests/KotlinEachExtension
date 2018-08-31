@@ -1,5 +1,6 @@
 package com.fanhl.ktssugar.proxies
 
+import com.fanhl.ktssugar.IA
 import java.lang.reflect.Proxy
 
 object LinProxies {
@@ -9,12 +10,16 @@ object LinProxies {
     @Suppress("UNCHECKED_CAST")
     fun <T> createEachProxy(clazz: Class<T>, iterable: Iterable<T>): T {
         val handler = EachByIterableInterpreter(iterable)
-        return Proxy.newProxyInstance(
+        val newProxyInstance = Proxy.newProxyInstance(
                 clazz.classLoader,
-//                arrayOf(clazz::class.java),
-                arrayOfNulls<Class<*>>(0),
+                arrayOf(IA::class.java),
+//                arrayOfNulls<Class<*>>(0),
                 handler
-        ) as T
+        )
+
+        (newProxyInstance as IA).print()
+
+        return newProxyInstance as T
     }
 
 }

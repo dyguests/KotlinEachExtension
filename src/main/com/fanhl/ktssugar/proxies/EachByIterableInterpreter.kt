@@ -9,11 +9,11 @@ import java.lang.reflect.Method
 class EachByIterableInterpreter<out T>(private val iterable: Iterable<T>) : InvocationHandler {
 
     @Throws(Throwable::class)
-    override fun invoke(proxy: Any, method: Method, args: Array<Any>): Any? {
+    override fun invoke(proxy: Any?, method: Method?, args: Array<Any>?): Any? {
         println("--before running...")
         var result: Any? = null
         iterable.forEach {
-            result = method.invoke(it, args)
+            result = method?.invoke(it, args)
         }
         println("--after running...")
 
