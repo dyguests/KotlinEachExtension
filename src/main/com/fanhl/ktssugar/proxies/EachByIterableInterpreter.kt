@@ -10,7 +10,7 @@ class EachByIterableInterpreter<out T>(private val iterable: Iterable<T>) : Invo
 
     @Throws(Throwable::class)
     override fun invoke(proxy: Any?, method: Method?, args: Array<Any>?): Any? {
-        println("--before running...")
+//        println("--before running...")
         var result: Any? = null
         iterable.forEach {
             result = if (args != null) {
@@ -19,7 +19,7 @@ class EachByIterableInterpreter<out T>(private val iterable: Iterable<T>) : Invo
                 method?.invoke(it)
             }
         }
-        println("--after running...")
+//        println("--after running...")
 
         return result
     }
