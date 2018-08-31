@@ -10,7 +10,7 @@ private fun Int.println() {
     println(this)
 }
 
-open class A(val s: String = "none") {
+class A(val s: String = "none") {
     fun print() {
         println(s)
     }

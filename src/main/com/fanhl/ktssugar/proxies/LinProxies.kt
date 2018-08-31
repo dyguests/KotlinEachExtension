@@ -11,7 +11,8 @@ object LinProxies {
         val handler = EachByIterableInterpreter(iterable)
         return Proxy.newProxyInstance(
                 clazz.classLoader,
-                arrayOf(clazz::class.java),
+//                arrayOf(clazz::class.java),
+                arrayOfNulls<Class<*>>(0),
                 handler
         ) as T
     }
