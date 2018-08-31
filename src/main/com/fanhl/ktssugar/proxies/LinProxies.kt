@@ -8,7 +8,7 @@ object LinProxies {
      */
     @Suppress("UNCHECKED_CAST")
     fun <T> create_each_proxy(clazz: Class<T>, iterable: Iterable<T>): T {
-        val handler = IterableInterpreter(iterable)
+        val handler = EachByIterableInterpreter(iterable)
         return Proxy.newProxyInstance(
                 clazz.classLoader,
                 arrayOf(clazz::class.java),
