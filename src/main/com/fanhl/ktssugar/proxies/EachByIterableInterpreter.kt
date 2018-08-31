@@ -13,7 +13,11 @@ class EachByIterableInterpreter<out T>(private val iterable: Iterable<T>) : Invo
         println("--before running...")
         var result: Any? = null
         iterable.forEach {
-            result = method?.invoke(it, args)
+            result = if (args != null) {
+                method?.invoke(it, args)
+            } else {
+                method?.invoke(it)
+            }
         }
         println("--after running...")
 

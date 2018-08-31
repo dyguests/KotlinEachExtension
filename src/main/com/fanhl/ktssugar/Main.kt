@@ -1,7 +1,7 @@
 package com.fanhl.ktssugar
 
 fun main(args: Array<String>) {
-    val list = listOf(A("a"), A("c"), A("c"))
+    val list = listOf(A("a"), A("b"), A("c"))
 
     list.each.print()
 }
