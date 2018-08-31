@@ -16,6 +16,18 @@ Will,It's works.
 
     listOf<IA>(A("a"), A("b"), A("c")).each.print()
 
+    // 
+    
+    interface IA {
+        fun print()
+    }
+    
+    class A(val s: String = "none") : IA {
+        override fun print() {
+            println(s)
+        }
+    }
+
 But `IA` must be interface,sad.
 
 Hope there is a better way.
